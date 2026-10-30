@@ -1,0 +1,75 @@
+# =========================================================
+#  MarvinApps — configuración para hosting Apache / LiteSpeed
+#  (cPanel, Hostinger, etc.). Si tu hosting es Nginx, Netlify,
+#  Vercel o Cloudflare Pages, este archivo se ignora sin problema.
+# =========================================================
+
+AddDefaultCharset UTF-8
+DirectoryIndex index.html
+Options -Indexes
+ErrorDocument 404 /404.html
+
+# --- Tipos de archivo ---
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType application/manifest+json .webmanifest
+  AddType text/plain .txt
+  AddCharset UTF-8 .txt .xml .css .js .webmanifest
+</IfModule>
+
+# --- HTTPS y dominio sin "www" ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  # X-Forwarded-Proto evita bucles cuando la CDN de Hostinger termina el SSL
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://marvinapps.com%{REQUEST_URI} [L,R=301]
+
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^ https://marvinapps.com%{REQUEST_URI} [L,R=301]
+
+  # Ocultar archivos y carpetas internas (.claude/, .git/, notas .md, etc.)
+  RewriteRule (^|/)\.(?!well-known/) - [R=404,L]
+  RewriteRule \.md$ - [R=404,L]
+
+  # Quitar "index.html" de las URL (evita contenido duplicado)
+  RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+  RewriteRule ^(.*/)?index\.html$ /$1 [L,R=301]
+</IfModule>
+
+# --- Compresión ---
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css text/xml application/xml application/javascript application/json application/ld+json application/manifest+json image/svg+xml
+</IfModule>
+
+# --- Caché del navegador ---
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 week"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/webp "access plus 6 months"
+  ExpiresByType image/png "access plus 6 months"
+  ExpiresByType image/jpeg "access plus 6 months"
+  ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 6 months"
+  ExpiresByType application/xml "access plus 1 day"
+  ExpiresByType text/plain "access plus 1 day"
+</IfModule>
+
+# --- Cabeceras de seguridad ---
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Strict-Transport-Security "max-age=31536000"
+  # CSP: el hash corresponde al script del tema en el <head> de cada página.
+  # Si ese script cambia, recalcula el hash o el tema dejará de aplicarse antes de pintar.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-zA5LO07uh1oC/wzKhSwEbN0IDdBP5IFmfBumcNNkBN0='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+  # Permite que agentes de IA lean llms.txt desde cualquier origen
+  <FilesMatch "^(llms|llms-full)\.txt$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>

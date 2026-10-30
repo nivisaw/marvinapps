@@ -1,0 +1,378 @@
+{
+ "es": {
+  "org": {
+   "@type": "ProfessionalService",
+   "@id": "https://marvinapps.com/#organization",
+   "name": "MarvinApps",
+   "alternateName": "Marvin Apps",
+   "url": "https://marvinapps.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://marvinapps.com/assets/img/logo-marvinapps.png",
+    "width": 315,
+    "height": 246
+   },
+   "image": "https://marvinapps.com/assets/img/og-image.jpg",
+   "description": "Diseño y construyo software a la medida, aplicaciones web SaaS e integraciones (WhatsApp, pagos, facturación DIAN) para empresas en Colombia y Latinoamérica.",
+   "slogan": "Software a la medida que pone orden en tu negocio.",
+   "founder": {
+    "@id": "https://marvinapps.com/#person"
+   },
+   "telephone": "+573214012236",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bogotá",
+    "addressRegion": "Bogotá D.C.",
+    "addressCountry": "CO"
+   },
+   "areaServed": [
+    {
+     "@type": "Country",
+     "name": "Colombia"
+    },
+    {
+     "@type": "Place",
+     "name": "Latin America"
+    }
+   ],
+   "availableLanguage": [
+    "Spanish",
+    "English"
+   ],
+   "sameAs": [
+    "https://www.linkedin.com/in/marvindelgado"
+   ],
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "telephone": "+573214012236",
+    "availableLanguage": [
+     "Spanish",
+     "English"
+    ],
+    "areaServed": "419"
+   },
+   "knowsAbout": [
+    "Software a la medida",
+    "Aplicaciones web y SaaS",
+    "Integraciones y APIs",
+    "Arquitectura y backend en la nube",
+    "Consultoría y transformación digital",
+    "Soporte y evolución"
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Software a la medida",
+       "description": "Sistemas diseñados alrededor de cómo trabaja tu negocio, no al revés: ERP, puntos de venta, gestión de operaciones e inventarios.",
+       "provider": {
+        "@id": "https://marvinapps.com/#organization"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Aplicaciones web y SaaS",
+       "description": "Plataformas en la nube que funcionan en computador, tablet y celular desde el navegador, sin instalar nada.",
+       "provider": {
+        "@id": "https://marvinapps.com/#organization"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Integraciones y APIs",
+       "description": "Conecto tu software con WhatsApp, pasarelas de pago, facturación electrónica DIAN y los sistemas que ya usas.",
+       "provider": {
+        "@id": "https://marvinapps.com/#organization"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Arquitectura y backend en la nube",
+       "description": "Backends escalables y seguros con la experiencia de haber construido servicios para plataformas de alto tráfico.",
+       "provider": {
+        "@id": "https://marvinapps.com/#organization"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Consultoría y transformación digital",
+       "description": "Te ayudo a decidir qué digitalizar primero, qué herramientas usar y cómo pasar del papel y las hojas de cálculo a un sistema.",
+       "provider": {
+        "@id": "https://marvinapps.com/#organization"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Soporte y evolución",
+       "description": "Acompañamiento después del lanzamiento: mantenimiento, mejoras continuas y nuevas funcionalidades según crece tu negocio.",
+       "provider": {
+        "@id": "https://marvinapps.com/#organization"
+       }
+      }
+     }
+    ]
+   }
+  },
+  "person": {
+   "@type": "Person",
+   "@id": "https://marvinapps.com/#person",
+   "name": "Marvin David Delgado",
+   "jobTitle": "Ingeniero de Software y Docente Universitario",
+   "url": "https://marvinapps.com/nosotros/",
+   "image": "https://marvinapps.com/assets/img/portrait.jpg",
+   "telephone": "+573214012236",
+   "sameAs": [
+    "https://www.linkedin.com/in/marvindelgado"
+   ],
+   "worksFor": {
+    "@id": "https://marvinapps.com/#organization"
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bogotá",
+    "addressRegion": "Bogotá D.C.",
+    "addressCountry": "CO"
+   },
+   "knowsLanguage": [
+    "es",
+    "en"
+   ],
+   "knowsAbout": [
+    "Software development",
+    "Backend architecture",
+    "REST APIs",
+    "Cloud computing",
+    "SaaS",
+    "Software engineering education",
+    "Databases",
+    "Cybersecurity",
+    "Digital transformation"
+   ],
+   "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Ingeniero de Software y Docente Universitario"
+   }
+  },
+  "website": {
+   "@type": "WebSite",
+   "@id": "https://marvinapps.com/#website",
+   "url": "https://marvinapps.com/",
+   "name": "MarvinApps",
+   "inLanguage": [
+    "es-CO",
+    "en"
+   ],
+   "publisher": {
+    "@id": "https://marvinapps.com/#organization"
+   }
+  }
+ },
+ "en": {
+  "org": {
+   "@type": "ProfessionalService",
+   "@id": "https://marvinapps.com/#organization",
+   "name": "MarvinApps",
+   "alternateName": "Marvin Apps",
+   "url": "https://marvinapps.com/",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://marvinapps.com/assets/img/logo-marvinapps.png",
+    "width": 315,
+    "height": 246
+   },
+   "image": "https://marvinapps.com/assets/img/og-image.jpg",
+   "description": "I design and build custom software, SaaS web applications and integrations (WhatsApp, payments, DIAN e-invoicing) for companies in Colombia and Latin America.",
+   "slogan": "Custom software that brings order to your business.",
+   "founder": {
+    "@id": "https://marvinapps.com/#person"
+   },
+   "telephone": "+573214012236",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bogotá",
+    "addressRegion": "Bogotá D.C.",
+    "addressCountry": "CO"
+   },
+   "areaServed": [
+    {
+     "@type": "Country",
+     "name": "Colombia"
+    },
+    {
+     "@type": "Place",
+     "name": "Latin America"
+    }
+   ],
+   "availableLanguage": [
+    "Spanish",
+    "English"
+   ],
+   "sameAs": [
+    "https://www.linkedin.com/in/marvindelgado"
+   ],
+   "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "sales",
+    "telephone": "+573214012236",
+    "availableLanguage": [
+     "Spanish",
+     "English"
+    ],
+    "areaServed": "419"
+   },
+   "knowsAbout": [
+    "Custom software",
+    "Web apps and SaaS",
+    "Integrations and APIs",
+    "Cloud architecture and backend",
+    "Consulting and digital transformation",
+    "Support and evolution"
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Custom software",
+       "description": "Systems designed around the way your business works, not the other way around: ERP, point of sale, operations and inventory management.",
+       "provider": {
+        "@id": "https://marvinapps.com/#organization"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Web apps and SaaS",
+       "description": "Cloud platforms that run on desktop, tablet and phone right from the browser, with nothing to install.",
+       "provider": {
+        "@id": "https://marvinapps.com/#organization"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Integrations and APIs",
+       "description": "I connect your software with WhatsApp, payment gateways, DIAN electronic invoicing and the systems you already use.",
+       "provider": {
+        "@id": "https://marvinapps.com/#organization"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Cloud architecture and backend",
+       "description": "Scalable, secure backends built with the experience of creating services for high-traffic platforms.",
+       "provider": {
+        "@id": "https://marvinapps.com/#organization"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Consulting and digital transformation",
+       "description": "I help you decide what to digitize first, which tools to use and how to move from paper and spreadsheets to a real system.",
+       "provider": {
+        "@id": "https://marvinapps.com/#organization"
+       }
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Support and evolution",
+       "description": "Ongoing support after launch: maintenance, continuous improvements and new features as your business grows.",
+       "provider": {
+        "@id": "https://marvinapps.com/#organization"
+       }
+      }
+     }
+    ]
+   }
+  },
+  "person": {
+   "@type": "Person",
+   "@id": "https://marvinapps.com/#person",
+   "name": "Marvin David Delgado",
+   "jobTitle": "Software Engineer and University Lecturer",
+   "url": "https://marvinapps.com/en/about/",
+   "image": "https://marvinapps.com/assets/img/portrait.jpg",
+   "telephone": "+573214012236",
+   "sameAs": [
+    "https://www.linkedin.com/in/marvindelgado"
+   ],
+   "worksFor": {
+    "@id": "https://marvinapps.com/#organization"
+   },
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bogotá",
+    "addressRegion": "Bogotá D.C.",
+    "addressCountry": "CO"
+   },
+   "knowsLanguage": [
+    "es",
+    "en"
+   ],
+   "knowsAbout": [
+    "Software development",
+    "Backend architecture",
+    "REST APIs",
+    "Cloud computing",
+    "SaaS",
+    "Software engineering education",
+    "Databases",
+    "Cybersecurity",
+    "Digital transformation"
+   ],
+   "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Software Engineer and University Lecturer"
+   }
+  },
+  "website": {
+   "@type": "WebSite",
+   "@id": "https://marvinapps.com/#website",
+   "url": "https://marvinapps.com/",
+   "name": "MarvinApps",
+   "inLanguage": [
+    "es-CO",
+    "en"
+   ],
+   "publisher": {
+    "@id": "https://marvinapps.com/#organization"
+   }
+  }
+ }
+}

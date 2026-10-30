@@ -1,0 +1,25 @@
+# Dependencias
+node_modules/
+
+# Sitio generado por Eleventy (se reconstruye con el build)
+sitio-web/
+.cache/
+
+# Variables de entorno / secretos
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp

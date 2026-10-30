@@ -1,0 +1,22 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+layout: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+{%- for p in collections.pages %}
+  <url>
+    <loc>{{ site.url }}{{ p.url }}</loc>
+    <lastmod>{{ site.updated }}</lastmod>
+    <changefreq>{{ p.data.sitemap.changefreq }}</changefreq>
+    <priority>{{ p.data.sitemap.priority }}</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="{{ site.url }}{{ p.data.alt.es }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ site.url }}{{ p.data.alt.en }}"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ p.data.alt.es }}"/>
+    {%- for img in p.data.sitemap.images %}
+    <image:image><image:loc>{{ site.url }}{{ img }}</image:loc></image:image>
+    {%- endfor %}
+  </url>
+{%- endfor %}
+</urlset>

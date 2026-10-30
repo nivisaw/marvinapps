@@ -1,0 +1,28 @@
+# MarvinApps
+
+> MarvinApps es la marca de Marvin David Delgado, ingeniero de software, arquitecto backend y docente universitario en Bogotá, Colombia. Diseña y construye software a la medida, aplicaciones web/SaaS e integraciones (WhatsApp, pasarelas de pago, facturación electrónica DIAN) para empresas de Colombia y Latinoamérica. Primera asesoría sin costo. Sitio disponible en español e inglés.
+
+Datos clave:
+- Fundador: Marvin David Delgado — más de 8 años de experiencia (Mercado Libre, Robin Food Colombia, Domicilios.com); docente en la Corporación Universitaria Republicana desde 2025.
+- Servicios: Software a la medida, Aplicaciones web y SaaS, Integraciones y APIs, Arquitectura y backend en la nube, Consultoría y transformación digital, Soporte y evolución.
+- Productos propios en operación: YOYO (gestión de talleres de motos), TATA (punto de venta para cafés y bares), LAVATRONIC (gestión de lavaderos de carros y motos), CHEEKY (juego de mesa digital para adultos, en tiempo real y 3D).
+- Contacto: WhatsApp +57 321 401 2236 (https://wa.me/573214012236) · LinkedIn https://www.linkedin.com/in/marvindelgado
+- Ubicación: Bogotá, Colombia. Atención remota en toda Latinoamérica.
+
+## Páginas (español)
+- [Inicio](https://marvinapps.com/): Diseño y construyo software a la medida, aplicaciones web SaaS e integraciones (WhatsApp, pagos, facturación DIAN) para empresas en Colombia y Latinoamérica.
+- [Servicios](https://marvinapps.com/servicios/): Software a la medida, aplicaciones web y SaaS, integraciones y APIs, arquitectura backend en la nube, consultoría en transformación digital y soporte.
+- [Portafolio](https://marvinapps.com/portafolio/): Productos de software propios en operación: YOYO para talleres de motos, TATA punto de venta para cafés y bares, LAVATRONIC para lavaderos y el juego CHEEKY.
+- [Nosotros](https://marvinapps.com/nosotros/): MarvinApps es la marca de Marvin David Delgado, ingeniero de software, arquitecto backend y docente universitario con experiencia en Mercado Libre y Robin Food.
+- [Contacto](https://marvinapps.com/contacto/): Agenda una asesoría sin costo para tu proyecto de software. Escríbeme por WhatsApp o LinkedIn. Bogotá, Colombia, con atención remota en Latinoamérica.
+
+## Pages (English)
+- [Home](https://marvinapps.com/en/): I design and build custom software, SaaS web applications and integrations (WhatsApp, payments, DIAN e-invoicing) for companies in Colombia and Latin America.
+- [Services](https://marvinapps.com/en/services/): Custom software, web apps and SaaS, integrations and APIs, cloud backend architecture, digital transformation consulting and ongoing support.
+- [Portfolio](https://marvinapps.com/en/portfolio/): In-house software products in production: YOYO for motorcycle workshops, TATA point of sale for cafés and bars, LAVATRONIC for car washes and the CHEEKY game.
+- [About](https://marvinapps.com/en/about/): MarvinApps is the brand of Marvin David Delgado, software engineer, backend architect and university lecturer with experience at Mercado Libre and Robin Food.
+- [Contact](https://marvinapps.com/en/contact/): Book a free consultation for your software project. Reach me on WhatsApp or LinkedIn. Based in Bogotá, Colombia, working remotely across Latin America.
+
+## Optional
+- [Contenido completo en texto / Full text content](https://marvinapps.com/llms-full.txt)
+- [Sitemap](https://marvinapps.com/sitemap.xml)

@@ -1,0 +1,217 @@
+# MarvinApps — llms-full.txt
+
+Versión en texto plano del sitio https://marvinapps.com para modelos de lenguaje y agentes de IA. / Plain-text version of the site for LLMs and AI agents.
+
+---
+
+# MarvinApps — Software a la medida que pone orden en tu negocio.
+
+Diseño y construyo sistemas de gestión, aplicaciones web e integraciones para empresas que quieren dejar el papel y las hojas de cálculo, y crecer con datos claros.
+
+## Soluciones de punta a punta
+
+### Software a la medida
+Sistemas diseñados alrededor de cómo trabaja tu negocio, no al revés: ERP, puntos de venta, gestión de operaciones e inventarios.
+- Levantamiento de procesos
+- Multisede y roles
+- Reportes para decidir
+
+### Aplicaciones web y SaaS
+Plataformas en la nube que funcionan en computador, tablet y celular desde el navegador, sin instalar nada.
+- Diseño adaptable y modo oscuro
+- Tiempo real
+- Apps instalables (PWA)
+
+### Integraciones y APIs
+Conecto tu software con WhatsApp, pasarelas de pago, facturación electrónica DIAN y los sistemas que ya usas.
+- APIs REST robustas
+- Automatización de procesos
+- Notificaciones automáticas
+
+### Arquitectura y backend en la nube
+Backends escalables y seguros con la experiencia de haber construido servicios para plataformas de alto tráfico.
+- Bases de datos y rendimiento
+- Seguridad y trazabilidad
+- Cumplimiento Ley 1581
+
+### Consultoría y transformación digital
+Te ayudo a decidir qué digitalizar primero, qué herramientas usar y cómo pasar del papel y las hojas de cálculo a un sistema.
+- Diagnóstico tecnológico
+- Hoja de ruta
+- Capacitación de equipos
+
+### Soporte y evolución
+Acompañamiento después del lanzamiento: mantenimiento, mejoras continuas y nuevas funcionalidades según crece tu negocio.
+- Monitoreo y respaldos
+- Mejoras por etapas
+- Atención directa
+
+## Cómo trabajamos juntos
+
+1. **Descubrimiento**: Entiendo tu operación, tus dolores y tus metas. Definimos alcance, prioridades y presupuesto.
+2. **Diseño**: Prototipo las pantallas y la arquitectura para validar la solución antes de escribir código.
+3. **Desarrollo por etapas**: Entregas frecuentes que puedes probar. Ves el avance real, no solo informes.
+4. **Lanzamiento y acompañamiento**: Puesta en marcha, capacitación a tu equipo y soporte para que el sistema crezca contigo.
+
+## Experiencia en sectores reales
+
+- Talleres y servicio automotriz
+- Restaurantes, cafés y bares
+- Lavaderos y servicios por turno
+- Comercio y retail
+- Educación y formación
+- Entretenimiento digital
+
+## Productos reales, operando hoy
+
+- **YOYO** (Gestión de talleres): Sistema de gestión para talleres de mantenimiento de motocicletas.
+- **TATA** (Punto de venta): El punto de venta pensado para cafés y bares.
+- **LAVATRONIC** (Gestión de lavaderos): El sistema de gestión para lavaderos de carros y motos.
+- **CHEEKY** (Juego multijugador +18): Juego de mesa digital para adultos, en tiempo real y en 3D.
+
+## Experiencia de grandes plataformas, trato directo de un aliado
+
+He construido servicios para Mercado Libre, Robin Food y Domicilios.com. Hoy llevo esa experiencia a empresas que necesitan software confiable sin la burocracia de una gran agencia.
+
+- Hablas directamente con quien construye tu sistema
+- Entregas por etapas que puedes probar
+- Código tuyo, documentado y mantenible
+
+## Ingeniería con mentalidad de docente — Marvin David Delgado
+
+MarvinApps es la marca de Marvin David Delgado: ingeniero de software, arquitecto backend y docente universitario.
+
+Llevo más de ocho años diseñando y construyendo sistemas backend escalables, APIs robustas y arquitecturas mantenibles, en empresas de alto tráfico como Mercado Libre.
+
+Hoy pongo esa experiencia al servicio de empresas que necesitan software propio: productos como YOYO, TATA y LAVATRONIC nacieron de escuchar a dueños de negocio y convertir su operación diaria en un sistema simple.
+
+Como docente universitario, explicar con claridad es parte de mi trabajo: sabrás siempre qué se está construyendo y por qué.
+
+### Dónde he construido software
+
+- 2025 – — **Corporación Universitaria Republicana**: Docente universitario en programación, bases de datos, ciberseguridad e ingeniería de software.
+- 2022 – 2025 — **Mercado Libre**: APIs y servicios backend para centros de ayuda y preguntas frecuentes.
+- 2019 – 2022 — **Robin Food Colombia**: Sistemas internos de gestión y administración de cocina para la cadena MUY.
+- 2018 – 2019 — **Domicilios.com**: Integraciones backend entre sistemas externos de cada tienda.
+
+### Cómo me gusta trabajar
+
+- **Claridad**: Te explico cada decisión en lenguaje sencillo.
+- **Calidad**: Código mantenible, probado y documentado.
+- **Compromiso**: Tu proyecto se trata como si fuera propio.
+
+## Contacto
+
+La primera asesoría es sin costo. Respondo normalmente el mismo día hábil.
+
+- WhatsApp: +57 321 401 2236 — https://wa.me/573214012236
+- Email: 
+- LinkedIn: https://www.linkedin.com/in/marvindelgado
+- Bogotá, Colombia · Atención remota en toda Latinoamérica
+
+---
+
+# MarvinApps — Custom software that brings order to your business.
+
+I design and build management systems, web applications and integrations for companies that want to leave paper and spreadsheets behind and grow with clear data.
+
+## End-to-end solutions
+
+### Custom software
+Systems designed around the way your business works, not the other way around: ERP, point of sale, operations and inventory management.
+- Process discovery
+- Multi-branch and roles
+- Reports for decision-making
+
+### Web apps and SaaS
+Cloud platforms that run on desktop, tablet and phone right from the browser, with nothing to install.
+- Responsive design and dark mode
+- Real time
+- Installable apps (PWA)
+
+### Integrations and APIs
+I connect your software with WhatsApp, payment gateways, DIAN electronic invoicing and the systems you already use.
+- Robust REST APIs
+- Process automation
+- Automatic notifications
+
+### Cloud architecture and backend
+Scalable, secure backends built with the experience of creating services for high-traffic platforms.
+- Databases and performance
+- Security and traceability
+- Data-privacy compliance (Law 1581)
+
+### Consulting and digital transformation
+I help you decide what to digitize first, which tools to use and how to move from paper and spreadsheets to a real system.
+- Technology assessment
+- Roadmap
+- Team training
+
+### Support and evolution
+Ongoing support after launch: maintenance, continuous improvements and new features as your business grows.
+- Monitoring and backups
+- Incremental improvements
+- Direct support
+
+## How we work together
+
+1. **Discovery**: I learn about your operation, pain points and goals. We define scope, priorities and budget.
+2. **Design**: I prototype the screens and the architecture to validate the solution before writing code.
+3. **Incremental development**: Frequent deliveries you can test. You see real progress, not just reports.
+4. **Launch and support**: Go-live, training for your team and support so the system grows with you.
+
+## Experience in real-world sectors
+
+- Workshops and automotive service
+- Restaurants, cafés and bars
+- Car washes and appointment-based services
+- Retail and commerce
+- Education and training
+- Digital entertainment
+
+## Real products, running today
+
+- **YOYO** (Workshop management): Management system for motorcycle maintenance workshops.
+- **TATA** (Point of sale): The point of sale built for coffee shops and bars.
+- **LAVATRONIC** (Car wash management): The management system for car and motorcycle washes.
+- **CHEEKY** (18+ multiplayer game): A digital board game for adults, real-time and in 3D.
+
+## Big-platform experience, the direct attention of a partner
+
+I've built services for Mercado Libre, Robin Food and Domicilios.com. Today I bring that experience to companies that need reliable software without the bureaucracy of a large agency.
+
+- You talk directly to the person building your system
+- Incremental deliveries you can test
+- Code you own, documented and maintainable
+
+## Engineering with a teacher's mindset — Marvin David Delgado
+
+MarvinApps is the brand of Marvin David Delgado: software engineer, backend architect and university lecturer.
+
+For more than eight years I've been designing and building scalable backend systems, robust APIs and maintainable architectures at high-traffic companies such as Mercado Libre.
+
+Today I put that experience to work for companies that need their own software: products like YOYO, TATA and LAVATRONIC were born from listening to business owners and turning their daily operation into a simple system.
+
+As a university lecturer, explaining things clearly is part of my job: you'll always know what is being built and why.
+
+### Where I've built software
+
+- 2025 – — **Corporación Universitaria Republicana**: University lecturer in programming, databases, cybersecurity and software engineering.
+- 2022 – 2025 — **Mercado Libre**: Backend APIs and services for help centers and FAQs.
+- 2019 – 2022 — **Robin Food Colombia**: Internal management and kitchen administration systems for the MUY restaurant chain.
+- 2018 – 2019 — **Domicilios.com**: Backend integrations with each store's external systems.
+
+### How I like to work
+
+- **Clarity**: I explain every decision in plain language.
+- **Quality**: Maintainable, tested and documented code.
+- **Commitment**: Your project is treated as if it were my own.
+
+## Contact
+
+The first consultation is free. I usually reply the same business day.
+
+- WhatsApp: +57 321 401 2236 — https://wa.me/573214012236
+- Email: 
+- LinkedIn: https://www.linkedin.com/in/marvindelgado
+- Bogotá, Colombia · Remote service across Latin America

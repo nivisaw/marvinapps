@@ -1,0 +1,91 @@
+{%- set t = i18n[lang] -%}
+{%- set canonical = site.url + page.url -%}
+<!doctype html>
+<html lang="{{ t.htmlLang }}" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{#- Si cambias este script, recalcula su hash sha256 en la CSP de .htaccess #}
+<script>(function(){var t;try{t=localStorage.getItem("theme")}catch(e){}if(t!=="light"&&t!=="dark"){t=window.matchMedia&&matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"}document.documentElement.setAttribute("data-theme",t)})();</script>
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<meta name="author" content="{{ site.author }}">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<link rel="canonical" href="{{ canonical }}">
+<link rel="alternate" hreflang="es" href="{{ site.url }}{{ alt.es }}">
+<link rel="alternate" hreflang="en" href="{{ site.url }}{{ alt.en }}">
+<link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ alt.es }}">
+<meta name="theme-color" content="#022b31">
+<meta name="color-scheme" content="dark light">
+<meta name="geo.region" content="CO-DC">
+<meta name="geo.placename" content="Bogotá">
+<!-- Open Graph -->
+<meta property="og:type" content="{{ ogType }}">
+<meta property="og:site_name" content="MarvinApps">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ site.url }}{{ site.ogImage }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="{{ t.ogImageAlt }}">
+<meta property="og:locale" content="{{ t.ogLocale }}">
+<meta property="og:locale:alternate" content="{{ t.ogLocaleAlt }}">
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ site.url }}{{ site.ogImage }}">
+<!-- Iconos -->
+<link rel="icon" href="/favicon.ico?v=2" sizes="48x48">
+<link rel="icon" href="/assets/img/brand/favicon/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/brand/favicon/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest?v=2">
+<!-- Recursos para agentes de IA -->
+<link rel="alternate" type="text/markdown" title="llms.txt" href="{{ site.url }}/llms.txt">
+<link rel="sitemap" type="application/xml" href="{{ site.url }}/sitemap.xml">
+<!-- Tipografías -->
+<link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ "/assets/css/styles.css" | v }}">
+<script type="application/ld+json">
+{{ ldNodes | jsonld(lang) | safe }}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">{{ t.skip }}</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ t.nav[0].url }}" aria-label="{{ t.homeLabel }}"><img class="brand-dark" src="/assets/img/brand/svg/marvinapps-logo-dark.svg" alt="MarvinApps" width="214" height="48"><img class="brand-light" src="/assets/img/brand/svg/marvinapps-logo-light.svg" alt="" aria-hidden="true" width="214" height="48"></a>
+    <nav class="nav-links" id="site-nav" aria-label="{{ t.navLabel }}">{% for item in t.nav %}<a href="{{ item.url }}"{% if item.key == nav %} aria-current="page"{% endif %}>{{ item.label }}</a>{% endfor %}</nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="{{ t.langLabel }}"><a href="{{ alt.es }}" hreflang="es" lang="es"{% if lang == "es" %} aria-current="true"{% endif %} aria-label="Español">ES</a><a href="{{ alt.en }}" hreflang="en" lang="en"{% if lang == "en" %} aria-current="true"{% endif %} aria-label="English">EN</a></div>
+      <button class="icon-btn theme-toggle" type="button" aria-label="{{ t.themeLabel }}"><svg class="icon i-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg><svg class="icon i-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
+      <button class="icon-btn menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="{{ t.menuLabel }}"><svg class="icon i-menu" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg><svg class="icon i-x" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+{{ content | safe }}</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="{{ t.nav[0].url }}"><img class="brand-dark" src="/assets/img/brand/svg/marvinapps-logo-dark.svg" alt="MarvinApps" width="214" height="48"><img class="brand-light" src="/assets/img/brand/svg/marvinapps-logo-light.svg" alt="" aria-hidden="true" width="214" height="48"></a>
+      <p>{{ t.tagline }}</p>
+    </div>
+    <nav aria-label="{{ t.footerNavLabel }}"><ul>{% for item in t.nav %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endfor %}</ul></nav>
+    <div>
+      <h2 class="sr-only">{{ t.contactHeading }}</h2>
+      <ul>
+        <li><a href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg> {{ site.whatsappDisplay }}</a></li>
+        <li><a href="{{ site.linkedin }}" target="_blank" rel="noopener me"><svg class="icon " viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="container">© <span data-year>{{ buildYear }}</span> MarvinApps · Bogotá, Colombia · <a href="{{ t.privacy.url }}">{{ t.privacy.label }}</a></div></div>
+</footer>
+<script src="{{ "/assets/js/main.js" | v }}" defer></script>
+{%- if heroFx %}
+<script src="{{ "/assets/js/hero-fx.js" | v }}" defer></script>
+{%- endif %}
+</body>
+</html>

@@ -1,0 +1,48 @@
+{
+ "es": {
+  "htmlLang": "es-CO",
+  "ogLocale": "es_CO",
+  "ogLocaleAlt": "en_US",
+  "ogImageAlt": "MarvinApps — Software a la medida que pone orden en tu negocio",
+  "skip": "Saltar al contenido",
+  "homeLabel": "MarvinApps — Inicio",
+  "navLabel": "Principal",
+  "langLabel": "Idioma",
+  "themeLabel": "Cambiar tema",
+  "menuLabel": "Abrir menú",
+  "tagline": "Software a la medida y soluciones de informática para empresas que quieren crecer con orden.",
+  "footerNavLabel": "Navegación",
+  "contactHeading": "Contacto",
+  "privacy": { "label": "Política de privacidad", "url": "/privacidad/" },
+  "nav": [
+   { "key": "home", "label": "Inicio", "url": "/" },
+   { "key": "services", "label": "Servicios", "url": "/servicios/" },
+   { "key": "portfolio", "label": "Portafolio", "url": "/portafolio/" },
+   { "key": "about", "label": "Nosotros", "url": "/nosotros/" },
+   { "key": "contact", "label": "Contacto", "url": "/contacto/" }
+  ]
+ },
+ "en": {
+  "htmlLang": "en",
+  "ogLocale": "en_US",
+  "ogLocaleAlt": "es_CO",
+  "ogImageAlt": "MarvinApps — Custom software that brings order to your business",
+  "skip": "Skip to content",
+  "homeLabel": "MarvinApps — Home",
+  "navLabel": "Main",
+  "langLabel": "Language",
+  "themeLabel": "Toggle theme",
+  "menuLabel": "Open menu",
+  "tagline": "Custom software and IT solutions for companies that want to grow in an orderly way.",
+  "footerNavLabel": "Navigation",
+  "contactHeading": "Contact",
+  "privacy": { "label": "Privacy policy", "url": "/en/privacy/" },
+  "nav": [
+   { "key": "home", "label": "Home", "url": "/en/" },
+   { "key": "services", "label": "Services", "url": "/en/services/" },
+   { "key": "portfolio", "label": "Portfolio", "url": "/en/portfolio/" },
+   { "key": "about", "label": "About", "url": "/en/about/" },
+   { "key": "contact", "label": "Contact", "url": "/en/contact/" }
+  ]
+ }
+}
