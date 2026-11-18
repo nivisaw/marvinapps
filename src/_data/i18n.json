@@ -19,6 +19,7 @@
    { "key": "services", "label": "Servicios", "url": "/servicios/" },
    { "key": "portfolio", "label": "Portafolio", "url": "/portafolio/" },
    { "key": "about", "label": "Nosotros", "url": "/nosotros/" },
+   { "key": "network", "label": "Red de Confianza", "url": "/red-de-confianza/" },
    { "key": "contact", "label": "Contacto", "url": "/contacto/" }
   ]
  },
@@ -42,6 +43,7 @@
    { "key": "services", "label": "Services", "url": "/en/services/" },
    { "key": "portfolio", "label": "Portfolio", "url": "/en/portfolio/" },
    { "key": "about", "label": "About", "url": "/en/about/" },
+   { "key": "network", "label": "Trusted Network", "url": "/en/trusted-network/" },
    { "key": "contact", "label": "Contact", "url": "/en/contact/" }
   ]
  }

@@ -48,7 +48,7 @@
 <link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/sora-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ "/assets/css/styles.css" | v }}">
 <script type="application/ld+json">
-{{ ldNodes | jsonld(lang) | safe }}
+{{ (ldNodes.concat(page.url | trustNodes(lang)) if trustLd else ldNodes) | jsonld(lang) | safe }}
 </script>
 </head>
 <body>
@@ -84,6 +84,9 @@
   <div class="footer-bottom"><div class="container">© <span data-year>{{ buildYear }}</span> MarvinApps · Bogotá, Colombia · <a href="{{ t.privacy.url }}">{{ t.privacy.label }}</a></div></div>
 </footer>
 <script src="{{ "/assets/js/main.js" | v }}" defer></script>
+{%- if pageJs %}
+<script src="{{ pageJs | v }}" defer></script>
+{%- endif %}
 {%- if heroFx %}
 <script src="{{ "/assets/js/hero-fx.js" | v }}" defer></script>
 {%- endif %}

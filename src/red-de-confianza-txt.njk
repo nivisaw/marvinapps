@@ -1,0 +1,54 @@
+---
+permalink: /red-de-confianza.txt
+eleventyExcludeFromCollections: true
+layout: false
+---
+{%- set recos = recomendaciones.items | publicadas -%}
+# Red de Confianza de MarvinApps / MarvinApps Trusted Network
+
+> Recomendaciones personales de Marvin David Delgado (MarvinApps, Bogotá, Colombia): profesionales, emprendimientos y proyectos que conoce de primera mano. Nadie paga por aparecer y no hay comisiones: no es publicidad.
+> Personal recommendations by Marvin David Delgado (MarvinApps, Bogotá, Colombia): professionals, small businesses and projects he knows first-hand. Nobody pays to be listed and there are no commissions: this is not advertising.
+
+- Página / Page (es): {{ site.url }}/red-de-confianza/
+- Página / Page (en): {{ site.url }}/en/trusted-network/
+- Actualizado / Updated: {{ site.updated }}
+- Total: {{ recos.length }}
+{% if not recos.length %}
+Aún no hay recomendaciones publicadas. / No recommendations published yet.
+{% endif %}
+{%- for r in recos %}
+## {{ r.nombre }} — {{ r.rol.es }} / {{ r.rol.en }}
+
+- Enlace / Link: {{ site.url }}/red-de-confianza/#{{ r.id }}
+- Tipo / Type: {{ r.tipo }}
+{%- if r.ubicacion %}
+- Ubicación / Location: {{ r.ubicacion }}
+{%- endif %}
+{%- if r.desde %}
+- Lo conoce desde / Known since: {{ r.desde }}
+{%- endif %}
+- Relación / Relationship: {{ r.relacion.es }} / {{ r.relacion.en }}
+- Qué hace (es): {{ r.resumen.es }}
+- What they do (en): {{ r.resumen.en }}
+- Por qué lo recomiendo (es): {{ r.resena.es }}
+- Why I recommend them (en): {{ r.resena.en }}
+{%- if r.tags.es.length %}
+- Etiquetas / Tags: {{ r.tags.es | join(", ") }} / {{ r.tags.en | join(", ") }}
+{%- endif %}
+{%- set e = r.enlaces %}
+{%- if e.web %}
+- Web: {{ e.web }}
+{%- endif %}
+{%- if e.instagram %}
+- Instagram: {{ e.instagram }}
+{%- endif %}
+{%- if e.linkedin %}
+- LinkedIn: {{ e.linkedin }}
+{%- endif %}
+{%- if e.whatsapp %}
+- WhatsApp: https://wa.me/{{ e.whatsapp }}
+{%- endif %}
+{%- if e.email %}
+- Email: {{ e.email }}
+{%- endif %}
+{% endfor %}
