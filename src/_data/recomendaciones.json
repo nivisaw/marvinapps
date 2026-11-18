@@ -1,0 +1,945 @@
+{
+ "_ayuda": "Red de Confianza. Cada recomendación es un objeto en 'items'. Las que tienen \"draft\": true solo se ven con 'npm start' (nunca se publican). Campos: id (slug único, se usa como ancla #id), tipo (persona | proyecto | emprendimiento), schemaType (Person | Organization | LocalBusiness | SoftwareApplication | CreativeWork), nombre, rol {es,en}, logo (ruta a imagen cuadrada .webp ≥ 160px, opcional: si falta se muestran las iniciales), iniciales, tono (0–3, color del avatar), ubicacion, desde (año desde el que lo conoces), relacion {es,en} (cómo lo conoces), resumen {es,en} (qué hace, una frase), resena {es,en} (por qué lo recomiendas), tags {es:[],en:[]}, enlaces {web, instagram, linkedin, whatsapp (solo números con indicativo), email}, fecha (AAAA-MM-DD en que se agregó).",
+ "items": [
+  {
+   "id": "ana-ejemplo",
+   "draft": false,
+   "tipo": "persona",
+   "schemaType": "Person",
+   "nombre": "Ana Ejemplo",
+   "rol": {
+    "es": "Diseñadora UX/UI",
+    "en": "UX/UI designer"
+   },
+   "logo": null,
+   "iniciales": "AE",
+   "tono": 0,
+   "ubicacion": "Bogotá, Colombia",
+   "desde": 2021,
+   "relacion": {
+    "es": "Hemos trabajado juntos en varios proyectos",
+    "en": "We've worked together on several projects"
+   },
+   "resumen": {
+    "es": "Diseña interfaces claras para productos digitales y las prueba con usuarios reales.",
+    "en": "Designs clear interfaces for digital products and tests them with real users."
+   },
+   "resena": {
+    "es": "Tiene la rara habilidad de convertir una reunión confusa en un flujo que cualquiera entiende. Cuando entrega un diseño, el desarrollo fluye.",
+    "en": "She has the rare ability to turn a confusing meeting into a flow anyone understands. When she hands over a design, development just flows."
+   },
+   "tags": {
+    "es": [
+     "Diseño UX",
+     "Prototipos",
+     "Investigación"
+    ],
+    "en": [
+     "UX design",
+     "Prototyping",
+     "Research"
+    ]
+   },
+   "enlaces": {
+    "web": "https://example.com/ana-ejemplo",
+    "instagram": "",
+    "linkedin": "https://www.linkedin.com/in/ana-ejemplo",
+    "whatsapp": "",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "cafe-ejemplo",
+   "draft": false,
+   "tipo": "emprendimiento",
+   "schemaType": "LocalBusiness",
+   "nombre": "Café Ejemplo",
+   "rol": {
+    "es": "Café de especialidad",
+    "en": "Specialty coffee shop"
+   },
+   "logo": null,
+   "iniciales": "CE",
+   "tono": 1,
+   "ubicacion": "Medellín, Colombia",
+   "desde": 2023,
+   "relacion": {
+    "es": "Cliente y lugar favorito para trabajar",
+    "en": "Client and favorite place to work"
+   },
+   "resumen": {
+    "es": "Tuestan su propio café de origen colombiano y lo sirven con una atención impecable.",
+    "en": "They roast their own Colombian single-origin coffee and serve it with impeccable service."
+   },
+   "resena": {
+    "es": "Cuidan cada detalle, desde la finca hasta la taza. Es el tipo de negocio que hace las cosas bien aunque nadie lo esté mirando.",
+    "en": "They care about every detail, from farm to cup. It's the kind of business that does things right even when nobody's watching."
+   },
+   "tags": {
+    "es": [
+     "Café",
+     "Tostión propia"
+    ],
+    "en": [
+     "Coffee",
+     "In-house roasting"
+    ]
+   },
+   "enlaces": {
+    "web": "",
+    "instagram": "https://www.instagram.com/cafeejemplo",
+    "linkedin": "",
+    "whatsapp": "570000000000",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "proyecto-ejemplo",
+   "draft": false,
+   "tipo": "proyecto",
+   "schemaType": "CreativeWork",
+   "nombre": "Proyecto Ejemplo",
+   "rol": {
+    "es": "Comunidad de aprendizaje",
+    "en": "Learning community"
+   },
+   "logo": null,
+   "iniciales": "PE",
+   "tono": 2,
+   "ubicacion": "Latinoamérica · remoto",
+   "desde": 2024,
+   "relacion": {
+    "es": "Admiro su trabajo",
+    "en": "I admire their work"
+   },
+   "resumen": {
+    "es": "Enseña programación gratis a jóvenes de barrios populares, con mentores voluntarios.",
+    "en": "Teaches programming for free to young people in low-income neighborhoods, with volunteer mentors."
+   },
+   "resena": {
+    "es": "Como docente, sé lo que cuesta sostener algo así. Lo que logran con pocos recursos es admirable y vale la pena apoyarlo.",
+    "en": "As a teacher, I know what it takes to sustain something like this. What they achieve with few resources is admirable and worth supporting."
+   },
+   "tags": {
+    "es": [
+     "Educación",
+     "Impacto social"
+    ],
+    "en": [
+     "Education",
+     "Social impact"
+    ]
+   },
+   "enlaces": {
+    "web": "https://example.com/proyecto-ejemplo",
+    "instagram": "",
+    "linkedin": "",
+    "whatsapp": "",
+    "email": "hola@proyecto-ejemplo.example"
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "carlos-muestra",
+   "draft": false,
+   "tipo": "persona",
+   "schemaType": "Person",
+   "nombre": "Carlos Muestra",
+   "rol": {
+    "es": "Contador público",
+    "en": "Public accountant"
+   },
+   "logo": null,
+   "iniciales": "CM",
+   "tono": 3,
+   "ubicacion": "Bogotá, Colombia",
+   "desde": 2019,
+   "relacion": {
+    "es": "Lleva la contabilidad de MarvinApps",
+    "en": "Handles MarvinApps' accounting"
+   },
+   "resumen": {
+    "es": "Contabilidad, impuestos y facturación electrónica para pymes y profesionales independientes.",
+    "en": "Accounting, taxes and e-invoicing for SMEs and freelancers."
+   },
+   "resena": {
+    "es": "Explica la DIAN como si fuera fácil. Responde rápido, no deja nada para última hora y siempre te dice la verdad aunque no sea lo que quieres oír.",
+    "en": "He explains taxes as if they were easy. Replies fast, leaves nothing to the last minute and always tells you the truth, even when it's not what you want to hear."
+   },
+   "tags": {
+    "es": [
+     "Impuestos",
+     "Facturación electrónica",
+     "Pymes"
+    ],
+    "en": [
+     "Taxes",
+     "E-invoicing",
+     "SMEs"
+    ]
+   },
+   "enlaces": {
+    "web": "",
+    "instagram": "",
+    "linkedin": "https://www.linkedin.com/in/carlos-muestra",
+    "whatsapp": "570000000000",
+    "email": "hola@carlos-muestra.example"
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "taller-demo-motos",
+   "draft": false,
+   "tipo": "emprendimiento",
+   "schemaType": "LocalBusiness",
+   "nombre": "Taller Demo Motos",
+   "rol": {
+    "es": "Taller de motocicletas",
+    "en": "Motorcycle workshop"
+   },
+   "logo": null,
+   "iniciales": "TM",
+   "tono": 0,
+   "ubicacion": "Bogotá, Colombia",
+   "desde": 2022,
+   "relacion": {
+    "es": "Cliente de YOYO",
+    "en": "YOYO client"
+   },
+   "resumen": {
+    "es": "Mantenimiento preventivo y correctivo de motos de todas las marcas, con diagnóstico computarizado.",
+    "en": "Preventive and corrective maintenance for all motorcycle brands, with computerized diagnostics."
+   },
+   "resena": {
+    "es": "Fueron de los primeros en confiar en YOYO. Trabajan con orden, cobran justo y te muestran qué cambiaron y por qué.",
+    "en": "They were among the first to trust YOYO. They work in an orderly way, charge fairly and show you what they changed and why."
+   },
+   "tags": {
+    "es": [
+     "Motos",
+     "Mantenimiento"
+    ],
+    "en": [
+     "Motorcycles",
+     "Maintenance"
+    ]
+   },
+   "enlaces": {
+    "web": "",
+    "instagram": "https://www.instagram.com/tallerdemomotos",
+    "linkedin": "",
+    "whatsapp": "570000000000",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "laura-prueba",
+   "draft": false,
+   "tipo": "persona",
+   "schemaType": "Person",
+   "nombre": "Laura Prueba",
+   "rol": {
+    "es": "Fotógrafa de producto",
+    "en": "Product photographer"
+   },
+   "logo": null,
+   "iniciales": "LP",
+   "tono": 1,
+   "ubicacion": "Cali, Colombia",
+   "desde": 2020,
+   "relacion": {
+    "es": "Hizo las fotos de varios de mis proyectos",
+    "en": "Shot photos for several of my projects"
+   },
+   "resumen": {
+    "es": "Fotografía de producto y gastronomía para tiendas en línea y restaurantes.",
+    "en": "Product and food photography for online stores and restaurants."
+   },
+   "resena": {
+    "es": "Sus fotos venden. Entiende la marca antes de encender la cámara y entrega a tiempo, siempre.",
+    "en": "Her photos sell. She understands the brand before turning on the camera and always delivers on time."
+   },
+   "tags": {
+    "es": [
+     "Fotografía",
+     "E-commerce",
+     "Gastronomía"
+    ],
+    "en": [
+     "Photography",
+     "E-commerce",
+     "Food"
+    ]
+   },
+   "enlaces": {
+    "web": "https://example.com/laura-prueba",
+    "instagram": "https://www.instagram.com/lauraprueba",
+    "linkedin": "",
+    "whatsapp": "",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "libreria-abierta-demo",
+   "draft": false,
+   "tipo": "proyecto",
+   "schemaType": "SoftwareApplication",
+   "nombre": "Librería Abierta Demo",
+   "rol": {
+    "es": "Librería de código abierto",
+    "en": "Open-source library"
+   },
+   "logo": null,
+   "iniciales": "LD",
+   "tono": 2,
+   "ubicacion": "Remoto",
+   "desde": 2023,
+   "relacion": {
+    "es": "La uso en producción",
+    "en": "I use it in production"
+   },
+   "resumen": {
+    "es": "Validación de formularios accesible y liviana para la web, sin dependencias.",
+    "en": "Lightweight, accessible form validation for the web, with no dependencies."
+   },
+   "resena": {
+    "es": "La uso en varios proyectos porque es pequeña, está bien documentada y respeta la accesibilidad desde el diseño. Sus mantenedores responden los reportes con una paciencia ejemplar, y eso dice mucho de un proyecto.",
+    "en": "I use it in several projects because it's small, well documented and accessible by design. Its maintainers answer issues with exemplary patience, and that says a lot about a project."
+   },
+   "tags": {
+    "es": [
+     "Código abierto",
+     "Accesibilidad",
+     "JavaScript"
+    ],
+    "en": [
+     "Open source",
+     "Accessibility",
+     "JavaScript"
+    ]
+   },
+   "enlaces": {
+    "web": "https://example.com/libreria-abierta-demo",
+    "instagram": "",
+    "linkedin": "",
+    "whatsapp": "",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "panaderia-la-muestra",
+   "draft": false,
+   "tipo": "emprendimiento",
+   "schemaType": "LocalBusiness",
+   "nombre": "Panadería La Muestra",
+   "rol": {
+    "es": "Panadería artesanal",
+    "en": "Artisan bakery"
+   },
+   "logo": null,
+   "iniciales": "PM",
+   "tono": 3,
+   "ubicacion": "Bogotá, Colombia",
+   "desde": 2018,
+   "relacion": {
+    "es": "Vecinos de toda la vida",
+    "en": "Lifelong neighbors"
+   },
+   "resumen": {
+    "es": "Pan de masa madre, horneado todos los días desde las 5 a. m.",
+    "en": "Sourdough bread, baked every day from 5 a.m."
+   },
+   "resena": {
+    "es": "Tres generaciones haciendo pan con la misma receta y la misma sonrisa. Si pasas por el barrio, pide el pan de queso.",
+    "en": "Three generations making bread with the same recipe and the same smile. If you're in the neighborhood, ask for the cheese bread."
+   },
+   "tags": {
+    "es": [
+     "Panadería",
+     "Masa madre"
+    ],
+    "en": [
+     "Bakery",
+     "Sourdough"
+    ]
+   },
+   "enlaces": {
+    "web": "",
+    "instagram": "https://www.instagram.com/panaderialamuestra",
+    "linkedin": "",
+    "whatsapp": "570000000000",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "jorge-ficticio",
+   "draft": false,
+   "tipo": "persona",
+   "schemaType": "Person",
+   "nombre": "Jorge Ficticio",
+   "rol": {
+    "es": "Abogado en propiedad intelectual",
+    "en": "Intellectual property lawyer"
+   },
+   "logo": null,
+   "iniciales": "JF",
+   "tono": 0,
+   "ubicacion": "Bogotá, Colombia",
+   "desde": 2021,
+   "relacion": {
+    "es": "Me asesoró en el registro de marca",
+    "en": "Advised me on trademark registration"
+   },
+   "resumen": {
+    "es": "Registro de marcas, contratos de software y protección de datos personales.",
+    "en": "Trademark registration, software contracts and personal data protection."
+   },
+   "resena": {
+    "es": "Traduce lo legal a lenguaje humano. Gracias a él mis contratos de desarrollo son claros para ambas partes.",
+    "en": "He translates legalese into human language. Thanks to him my development contracts are clear for both parties."
+   },
+   "tags": {
+    "es": [
+     "Marcas",
+     "Contratos",
+     "Habeas data"
+    ],
+    "en": [
+     "Trademarks",
+     "Contracts",
+     "Data privacy"
+    ]
+   },
+   "enlaces": {
+    "web": "",
+    "instagram": "",
+    "linkedin": "https://www.linkedin.com/in/jorge-ficticio",
+    "whatsapp": "",
+    "email": "hola@jorge-ficticio.example"
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "valentina-ejemplar",
+   "draft": false,
+   "tipo": "persona",
+   "schemaType": "Person",
+   "nombre": "Valentina Ejemplar",
+   "rol": {
+    "es": "Community manager",
+    "en": "Community manager"
+   },
+   "logo": null,
+   "iniciales": "VE",
+   "tono": 1,
+   "ubicacion": "Barranquilla, Colombia",
+   "desde": 2022,
+   "relacion": {
+    "es": "Colaboramos en el lanzamiento de TATA",
+    "en": "We collaborated on the TATA launch"
+   },
+   "resumen": {
+    "es": "Estrategia de contenido y redes sociales para marcas locales.",
+    "en": "Content and social media strategy for local brands."
+   },
+   "resena": {
+    "es": "Conoce a la audiencia mejor que la propia marca. Sus campañas son honestas y funcionan.",
+    "en": "She knows the audience better than the brand itself. Her campaigns are honest and they work."
+   },
+   "tags": {
+    "es": [
+     "Redes sociales",
+     "Contenido"
+    ],
+    "en": [
+     "Social media",
+     "Content"
+    ]
+   },
+   "enlaces": {
+    "web": "",
+    "instagram": "https://www.instagram.com/valentinaejemplar",
+    "linkedin": "https://www.linkedin.com/in/valentina-ejemplar",
+    "whatsapp": "570000000000",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "lavadero-demo-express",
+   "draft": false,
+   "tipo": "emprendimiento",
+   "schemaType": "LocalBusiness",
+   "nombre": "Lavadero Demo Express",
+   "rol": {
+    "es": "Lavadero de carros y motos",
+    "en": "Car and motorcycle wash"
+   },
+   "logo": null,
+   "iniciales": "LE",
+   "tono": 2,
+   "ubicacion": "Soacha, Colombia",
+   "desde": 2024,
+   "relacion": {
+    "es": "Cliente de LAVATRONIC",
+    "en": "LAVATRONIC client"
+   },
+   "resumen": {
+    "es": "Lavado detallado, polichado y desinfección de interiores.",
+    "en": "Detailed washing, polishing and interior sanitizing."
+   },
+   "resena": {
+    "es": "Pasaron del cuaderno al celular en una semana. Hoy atienden el doble de carros con el mismo equipo.",
+    "en": "They went from notebook to phone in a week. Today they serve twice as many cars with the same team."
+   },
+   "tags": {
+    "es": [
+     "Lavadero",
+     "Detailing"
+    ],
+    "en": [
+     "Car wash",
+     "Detailing"
+    ]
+   },
+   "enlaces": {
+    "web": "",
+    "instagram": "",
+    "linkedin": "",
+    "whatsapp": "570000000000",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "podcast-codigo-ejemplo",
+   "draft": false,
+   "tipo": "proyecto",
+   "schemaType": "CreativeWork",
+   "nombre": "Podcast Código Ejemplo",
+   "rol": {
+    "es": "Podcast de tecnología",
+    "en": "Tech podcast"
+   },
+   "logo": null,
+   "iniciales": "PE",
+   "tono": 3,
+   "ubicacion": "Remoto",
+   "desde": 2022,
+   "relacion": {
+    "es": "Lo escucho cada semana",
+    "en": "I listen every week"
+   },
+   "resumen": {
+    "es": "Conversaciones sobre desarrollo de software y carrera en tecnología, en español.",
+    "en": "Conversations about software development and tech careers, in Spanish."
+   },
+   "resena": {
+    "es": "Es el podcast que le recomiendo a mis estudiantes. Habla de tecnología sin humo y con invitados que de verdad saben.",
+    "en": "It's the podcast I recommend to my students. Talks about tech without the hype, with guests who really know their stuff."
+   },
+   "tags": {
+    "es": [
+     "Podcast",
+     "Carrera",
+     "Software"
+    ],
+    "en": [
+     "Podcast",
+     "Career",
+     "Software"
+    ]
+   },
+   "enlaces": {
+    "web": "https://example.com/podcast-codigo-ejemplo",
+    "instagram": "https://www.instagram.com/podcastcodigoejemplo",
+    "linkedin": "",
+    "whatsapp": "",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "andres-simulado",
+   "draft": false,
+   "tipo": "persona",
+   "schemaType": "Person",
+   "nombre": "Andrés Simulado",
+   "rol": {
+    "es": "Ingeniero DevOps",
+    "en": "DevOps engineer"
+   },
+   "logo": null,
+   "iniciales": "AS",
+   "tono": 0,
+   "ubicacion": "Bogotá, Colombia",
+   "desde": 2019,
+   "relacion": {
+    "es": "Fuimos compañeros en Mercado Libre",
+    "en": "We were colleagues at Mercado Libre"
+   },
+   "resumen": {
+    "es": "Infraestructura en la nube, CI/CD y observabilidad para equipos de producto.",
+    "en": "Cloud infrastructure, CI/CD and observability for product teams."
+   },
+   "resena": {
+    "es": "El tipo de ingeniero que automatiza el problema antes de que se repita. Si tus despliegues dan miedo, háblale.",
+    "en": "The kind of engineer who automates a problem before it happens twice. If your deployments are scary, talk to him."
+   },
+   "tags": {
+    "es": [
+     "AWS",
+     "Kubernetes",
+     "CI/CD"
+    ],
+    "en": [
+     "AWS",
+     "Kubernetes",
+     "CI/CD"
+    ]
+   },
+   "enlaces": {
+    "web": "https://example.com/andres-simulado",
+    "instagram": "",
+    "linkedin": "https://www.linkedin.com/in/andres-simulado",
+    "whatsapp": "",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "tejidos-demo",
+   "draft": false,
+   "tipo": "emprendimiento",
+   "schemaType": "Organization",
+   "nombre": "Tejidos Demo",
+   "rol": {
+    "es": "Marca de moda sostenible",
+    "en": "Sustainable fashion brand"
+   },
+   "logo": null,
+   "iniciales": "TD",
+   "tono": 1,
+   "ubicacion": "Pasto, Colombia",
+   "desde": 2023,
+   "relacion": {
+    "es": "Admiro su trabajo",
+    "en": "I admire their work"
+   },
+   "resumen": {
+    "es": "Prendas tejidas a mano por artesanas de Nariño con lana natural.",
+    "en": "Hand-knitted garments made by artisans from Nariño with natural wool."
+   },
+   "resena": {
+    "es": "Cada prenda tiene nombre y apellido de quien la tejió. Un comercio justo de verdad, no de etiqueta.",
+    "en": "Every garment carries the name of the woman who knitted it. Truly fair trade, not just a label."
+   },
+   "tags": {
+    "es": [
+     "Moda",
+     "Artesanía",
+     "Comercio justo"
+    ],
+    "en": [
+     "Fashion",
+     "Crafts",
+     "Fair trade"
+    ]
+   },
+   "enlaces": {
+    "web": "https://example.com/tejidos-demo",
+    "instagram": "https://www.instagram.com/tejidosdemo",
+    "linkedin": "",
+    "whatsapp": "570000000000",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "sofia-ilustrativa",
+   "draft": false,
+   "tipo": "persona",
+   "schemaType": "Person",
+   "nombre": "Sofía Ilustrativa",
+   "rol": {
+    "es": "Ilustradora y animadora",
+    "en": "Illustrator and animator"
+   },
+   "logo": null,
+   "iniciales": "SI",
+   "tono": 2,
+   "ubicacion": "Ciudad de México, México",
+   "desde": 2024,
+   "relacion": {
+    "es": "Ilustró los personajes de CHEEKY",
+    "en": "Illustrated the CHEEKY characters"
+   },
+   "resumen": {
+    "es": "Ilustración de personajes, animación 2D y diseño para videojuegos.",
+    "en": "Character illustration, 2D animation and game art."
+   },
+   "resena": {
+    "es": "Le dio vida a CHEEKY con una personalidad que ninguna descripción habría logrado. Talento enorme y muy profesional.",
+    "en": "She brought CHEEKY to life with a personality no brief could have captured. Huge talent and very professional."
+   },
+   "tags": {
+    "es": [
+     "Ilustración",
+     "Animación",
+     "Videojuegos"
+    ],
+    "en": [
+     "Illustration",
+     "Animation",
+     "Games"
+    ]
+   },
+   "enlaces": {
+    "web": "https://example.com/sofia-ilustrativa",
+    "instagram": "https://www.instagram.com/sofiailustrativa",
+    "linkedin": "",
+    "whatsapp": "",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "bar-la-prueba",
+   "draft": false,
+   "tipo": "emprendimiento",
+   "schemaType": "LocalBusiness",
+   "nombre": "Bar La Prueba",
+   "rol": {
+    "es": "Bar de cocteles",
+    "en": "Cocktail bar"
+   },
+   "logo": null,
+   "iniciales": "BP",
+   "tono": 3,
+   "ubicacion": "Bogotá, Colombia",
+   "desde": 2023,
+   "relacion": {
+    "es": "Cliente de TATA",
+    "en": "TATA client"
+   },
+   "resumen": {
+    "es": "Coctelería de autor con ingredientes colombianos y música en vivo los jueves.",
+    "en": "Signature cocktails with Colombian ingredients and live music on Thursdays."
+   },
+   "resena": {
+    "es": "Exigentes con su operación y generosos con sus ideas: muchas funciones de TATA nacieron de sus sugerencias.",
+    "en": "Demanding about their operation and generous with ideas: many TATA features were born from their suggestions."
+   },
+   "tags": {
+    "es": [
+     "Coctelería",
+     "Música en vivo"
+    ],
+    "en": [
+     "Cocktails",
+     "Live music"
+    ]
+   },
+   "enlaces": {
+    "web": "",
+    "instagram": "https://www.instagram.com/barlaprueba",
+    "linkedin": "",
+    "whatsapp": "570000000000",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "miguel-angel-de-los-rios-ejemplo",
+   "draft": false,
+   "tipo": "persona",
+   "schemaType": "Person",
+   "nombre": "Miguel Ángel de los Ríos Ejemplo",
+   "rol": {
+    "es": "Profesor de inglés para profesionales de tecnología",
+    "en": "English teacher for tech professionals"
+   },
+   "logo": null,
+   "iniciales": "ME",
+   "tono": 0,
+   "ubicacion": "Remoto",
+   "desde": 2020,
+   "relacion": {
+    "es": "Fue mi profesor",
+    "en": "He was my teacher"
+   },
+   "resumen": {
+    "es": "Clases de inglés enfocadas en entrevistas, reuniones y documentación técnica.",
+    "en": "English classes focused on interviews, meetings and technical writing."
+   },
+   "resena": {
+    "es": "Gracias a sus clases pasé mis primeras entrevistas en inglés. Paciente, práctico y muy enfocado en lo que realmente usas en el trabajo.",
+    "en": "Thanks to his classes I passed my first interviews in English. Patient, practical and focused on what you actually use at work."
+   },
+   "tags": {
+    "es": [
+     "Inglés",
+     "Entrevistas"
+    ],
+    "en": [
+     "English",
+     "Interviews"
+    ]
+   },
+   "enlaces": {
+    "web": "https://example.com/miguel-angel-de-los-rios-ejemplo",
+    "instagram": "",
+    "linkedin": "https://www.linkedin.com/in/miguel-angel-de-los-rios-ejemplo",
+    "whatsapp": "570000000000",
+    "email": "hola@miguel-angel-de-los-rios-ejemplo.example"
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "huerta-urbana-demo",
+   "draft": false,
+   "tipo": "proyecto",
+   "schemaType": "CreativeWork",
+   "nombre": "Huerta Urbana Demo",
+   "rol": {
+    "es": "Huerta comunitaria",
+    "en": "Community garden"
+   },
+   "logo": null,
+   "iniciales": "HD",
+   "tono": 1,
+   "ubicacion": "Bogotá, Colombia",
+   "desde": 2021,
+   "relacion": {
+    "es": "Voluntario ocasional",
+    "en": "Occasional volunteer"
+   },
+   "resumen": {
+    "es": "Huerta urbana que enseña agricultura a niños y abastece un comedor comunitario.",
+    "en": "An urban garden that teaches farming to kids and supplies a community kitchen."
+   },
+   "resena": {
+    "es": "Un proyecto pequeño que cambia un barrio entero. Si buscas dónde aportar tu tiempo, aquí vale la pena.",
+    "en": "A small project that changes an entire neighborhood. If you're looking for where to give your time, it's worth it here."
+   },
+   "tags": {
+    "es": [
+     "Comunidad",
+     "Medio ambiente"
+    ],
+    "en": [
+     "Community",
+     "Environment"
+    ]
+   },
+   "enlaces": {
+    "web": "",
+    "instagram": "https://www.instagram.com/huertaurbanademo",
+    "linkedin": "",
+    "whatsapp": "",
+    "email": "hola@huerta-urbana-demo.example"
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "imprenta-muestra",
+   "draft": false,
+   "tipo": "emprendimiento",
+   "schemaType": "LocalBusiness",
+   "nombre": "Imprenta Muestra",
+   "rol": {
+    "es": "Imprenta y papelería",
+    "en": "Print shop"
+   },
+   "logo": null,
+   "iniciales": "IM",
+   "tono": 2,
+   "ubicacion": "Medellín, Colombia",
+   "desde": 2020,
+   "relacion": {
+    "es": "Proveedor de confianza",
+    "en": "Trusted supplier"
+   },
+   "resumen": {
+    "es": "Impresión digital y offset, tarjetas, empaques y material POP.",
+    "en": "Digital and offset printing, business cards, packaging and POS materials."
+   },
+   "resena": {
+    "es": "Calidad constante y tiempos que se cumplen. Te dicen si un diseño no va a quedar bien impreso antes de cobrarte.",
+    "en": "Consistent quality and deadlines they actually meet. They tell you if a design won't print well before charging you."
+   },
+   "tags": {
+    "es": [
+     "Impresión",
+     "Empaques"
+    ],
+    "en": [
+     "Printing",
+     "Packaging"
+    ]
+   },
+   "enlaces": {
+    "web": "https://example.com/imprenta-muestra",
+    "instagram": "",
+    "linkedin": "",
+    "whatsapp": "570000000000",
+    "email": ""
+   },
+   "fecha": "2026-11-17"
+  },
+  {
+   "id": "daniela-ejemplo",
+   "draft": false,
+   "tipo": "persona",
+   "schemaType": "Person",
+   "nombre": "Daniela Ejemplo",
+   "rol": {
+    "es": "Psicóloga organizacional",
+    "en": "Organizational psychologist"
+   },
+   "logo": null,
+   "iniciales": "DE",
+   "tono": 3,
+   "ubicacion": "Bogotá, Colombia",
+   "desde": 2022,
+   "relacion": {
+    "es": "Acompañó a un equipo con el que trabajé",
+    "en": "Coached a team I worked with"
+   },
+   "resumen": {
+    "es": "Bienestar laboral, liderazgo y procesos de selección para equipos pequeños.",
+    "en": "Workplace well-being, leadership and hiring for small teams."
+   },
+   "resena": {
+    "es": "Ayudó a un equipo agotado a volver a hablar entre sí. Su trabajo no se ve en un tablero, pero se nota en todo lo demás.",
+    "en": "She helped an exhausted team start talking to each other again. Her work doesn't show on a dashboard, but you notice it everywhere else."
+   },
+   "tags": {
+    "es": [
+     "Bienestar",
+     "Liderazgo",
+     "Selección"
+    ],
+    "en": [
+     "Well-being",
+     "Leadership",
+     "Hiring"
+    ]
+   },
+   "enlaces": {
+    "web": "",
+    "instagram": "",
+    "linkedin": "https://www.linkedin.com/in/daniela-ejemplo",
+    "whatsapp": "",
+    "email": "hola@daniela-ejemplo.example"
+   },
+   "fecha": "2026-11-17"
+  }
+ ]
+}

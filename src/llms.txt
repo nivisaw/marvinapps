@@ -14,6 +14,7 @@ Datos clave:
 - [Servicios](https://marvinapps.com/servicios/): Software a la medida, aplicaciones web y SaaS, integraciones y APIs, arquitectura backend en la nube, consultoría en transformación digital y soporte.
 - [Portafolio](https://marvinapps.com/portafolio/): Productos de software propios en operación: YOYO para talleres de motos, TATA punto de venta para cafés y bares, LAVATRONIC para lavaderos y el juego CHEEKY.
 - [Nosotros](https://marvinapps.com/nosotros/): MarvinApps es la marca de Marvin David Delgado, ingeniero de software, arquitecto backend y docente universitario con experiencia en Mercado Libre y Robin Food.
+- [Red de Confianza](https://marvinapps.com/red-de-confianza/): Profesionales, emprendimientos y proyectos que Marvin David Delgado recomienda por experiencia propia. Sin publicidad ni pagos.
 - [Contacto](https://marvinapps.com/contacto/): Agenda una asesoría sin costo para tu proyecto de software. Escríbeme por WhatsApp o LinkedIn. Bogotá, Colombia, con atención remota en Latinoamérica.
 
 ## Pages (English)
@@ -21,8 +22,10 @@ Datos clave:
 - [Services](https://marvinapps.com/en/services/): Custom software, web apps and SaaS, integrations and APIs, cloud backend architecture, digital transformation consulting and ongoing support.
 - [Portfolio](https://marvinapps.com/en/portfolio/): In-house software products in production: YOYO for motorcycle workshops, TATA point of sale for cafés and bars, LAVATRONIC for car washes and the CHEEKY game.
 - [About](https://marvinapps.com/en/about/): MarvinApps is the brand of Marvin David Delgado, software engineer, backend architect and university lecturer with experience at Mercado Libre and Robin Food.
+- [Trusted Network](https://marvinapps.com/en/trusted-network/): Professionals, small businesses and projects Marvin David Delgado recommends from first-hand experience. No ads, no payments.
 - [Contact](https://marvinapps.com/en/contact/): Book a free consultation for your software project. Reach me on WhatsApp or LinkedIn. Based in Bogotá, Colombia, working remotely across Latin America.
 
 ## Optional
 - [Contenido completo en texto / Full text content](https://marvinapps.com/llms-full.txt)
+- [Red de Confianza en texto / Trusted Network as text](https://marvinapps.com/red-de-confianza.txt): todas las recomendaciones con reseña y contacto / every recommendation with review and contact
 - [Sitemap](https://marvinapps.com/sitemap.xml)

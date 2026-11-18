@@ -69,7 +69,7 @@ ErrorDocument 404 /404.html
   # Si ese script cambia, recalcula el hash o el tema dejará de aplicarse antes de pintar.
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'sha256-zA5LO07uh1oC/wzKhSwEbN0IDdBP5IFmfBumcNNkBN0='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
   # Permite que agentes de IA lean llms.txt desde cualquier origen
-  <FilesMatch "^(llms|llms-full)\.txt$">
+  <FilesMatch "^(llms|llms-full|red-de-confianza)\.txt$">
     Header set Access-Control-Allow-Origin "*"
   </FilesMatch>
 </IfModule>

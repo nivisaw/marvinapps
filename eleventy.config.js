@@ -35,6 +35,50 @@ export default function (eleventyConfig) {
     return JSON.stringify({ "@context": "https://schema.org", "@graph": graph }, null, 1);
   });
 
+  // Red de Confianza: las recomendaciones con "draft": true solo aparecen con `npm start` (o DRAFTS=1).
+  const isServe = process.env.ELEVENTY_RUN_MODE === "serve" || process.env.DRAFTS === "1";
+  const published = (items) => (items || []).filter((r) => isServe || !r.draft);
+  eleventyConfig.addFilter("publicadas", published);
+  eleventyConfig.addFilter("contarTipo", (items, tipo) => items.filter((r) => r.tipo === tipo).length);
+
+  // Nodos JSON-LD de la Red de Confianza: un ItemList de reseñas escritas por Marvin.
+  eleventyConfig.addFilter("trustNodes", function (pageUrl, lang) {
+    const { site, recomendaciones } = this.ctx;
+    const url = site.url + pageUrl;
+    const items = published(recomendaciones.items).map((r, i) => {
+      const sameAs = ["web", "instagram", "linkedin"].map((k) => r.enlaces?.[k]).filter(Boolean);
+      const reviewed = {
+        "@type": r.schemaType || "Organization",
+        "@id": `${url}#${r.id}-entity`,
+        name: r.nombre,
+        description: r.resumen[lang],
+        ...(r.logo && { image: site.url + r.logo }),
+        ...(r.enlaces?.web && { url: r.enlaces.web }),
+        ...(sameAs.length && { sameAs }),
+        ...(r.ubicacion && (r.schemaType === "Person" ? { homeLocation: { "@type": "Place", name: r.ubicacion } } : { address: r.ubicacion })),
+        ...(r.schemaType === "Person" && { jobTitle: r.rol[lang] }),
+        ...(r.schemaType === "SoftwareApplication" && { applicationCategory: r.rol[lang], operatingSystem: "Web" }),
+      };
+      return {
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${url}#${r.id}`,
+        item: {
+          "@type": "Review",
+          "@id": `${url}#${r.id}`,
+          name: `${r.nombre} — ${r.rol[lang]}`,
+          reviewBody: r.resena[lang],
+          datePublished: r.fecha,
+          inLanguage: lang === "es" ? "es-CO" : "en",
+          author: { "@id": `${site.url}/#person` },
+          publisher: { "@id": `${site.url}/#organization` },
+          itemReviewed: reviewed,
+        },
+      };
+    });
+    return [{ "@type": "ItemList", "@id": `${url}#recomendaciones`, name: lang === "es" ? "Red de Confianza de MarvinApps" : "MarvinApps Trusted Network", numberOfItems: items.length, itemListOrder: "https://schema.org/ItemListUnordered", itemListElement: items }];
+  });
+
   return {
     dir: { input: "src", output: "sitio-web", includes: "_includes", data: "_data" },
     templateFormats: ["njk"],

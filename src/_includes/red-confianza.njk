@@ -1,0 +1,130 @@
+{#- Red de Confianza — contenido compartido por /red-de-confianza/ y /en/trusted-network/.
+    Textos: "copy" en el front matter de cada página. Datos: _data/recomendaciones.json -#}
+{%- macro icon(name) -%}
+<svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+{%- if name == "web" %}<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/>
+{%- elif name == "instagram" %}<rect width="20" height="20" x="2" y="2" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/>
+{%- elif name == "linkedin" %}<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/>
+{%- elif name == "whatsapp" %}<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+{%- elif name == "email" %}<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+{%- elif name == "link" %}<path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+{%- elif name == "search" %}<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+{%- elif name == "pin" %}<path d="M20 10c0 5-5.5 10.2-7.4 11.8a1 1 0 0 1-1.2 0C9.5 20.2 4 15 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>
+{%- elif name == "users" %}<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+{%- elif name == "calendar" %}<rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/>
+{%- elif name == "shield" %}<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/>
+{%- elif name == "eye" %}<path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>
+{%- elif name == "heart" %}<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+{%- endif %}</svg>
+{%- endmacro -%}
+{%- set c = copy -%}
+{%- set recos = recomendaciones.items | publicadas -%}
+<section class="page-hero hero-bg trust-hero" aria-labelledby="page-title">
+  <div class="container">
+    {%- if c.eyebrow %}
+    <span class="eyebrow">{{ c.eyebrow }}</span>
+    {%- endif %}
+    <h1 id="page-title">{{ c.h1 | safe }}</h1>
+    <p>{{ c.lead }}</p>
+    <ul class="trust-principles" aria-label="{{ c.principlesLabel }}">
+      {%- for p in c.principles %}
+      <li>{{ icon(p.icon) }}<span>{{ p.text }}</span></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+<section class="section trust-section" aria-labelledby="trust-list-title">
+  <div class="container">
+    <h2 id="trust-list-title" class="sr-only">{{ c.listTitle }}</h2>
+    {%- if recos.length %}
+    <div class="trust-toolbar" data-trust-toolbar hidden>
+      <div class="trust-filter" role="group" aria-label="{{ c.filterLabel }}">
+        <span class="trust-filter-pill" aria-hidden="true"></span>
+        <button type="button" data-filter="all" aria-pressed="true">{{ c.types.all }} <span class="trust-filter-n">{{ recos.length }}</span></button>
+        {%- for key in ["persona", "emprendimiento", "proyecto"] %}
+        {%- set n = recos | contarTipo(key) %}
+        {%- if n %}
+        <button type="button" data-filter="{{ key }}" aria-pressed="false">{{ c.types[key] }} <span class="trust-filter-n">{{ n }}</span></button>
+        {%- endif %}
+        {%- endfor %}
+      </div>
+      <label class="trust-search">{{ icon("search") }}<span class="sr-only">{{ c.searchLabel }}</span><input type="search" placeholder="{{ c.searchPlaceholder }}" autocomplete="off" data-trust-search></label>
+    </div>
+    <p class="trust-count" aria-live="polite" data-trust-count data-one="{{ c.countOne }}" data-many="{{ c.countMany }}"></p>
+    <ul class="trust-grid" data-trust-grid>
+      {%- for r in recos %}
+      <li class="trust-item" data-type="{{ r.tipo }}" data-search="{{ [r.nombre, r.rol[lang], r.resumen[lang], r.ubicacion, r.tags[lang] | join(' ')] | join(' ') | lower }}">
+        <article class="card trust-card reveal" id="{{ r.id }}" aria-labelledby="{{ r.id }}-name">
+          <span class="trust-glow" aria-hidden="true"></span>
+          <header class="trust-head">
+            <div class="trust-avatar tone-{{ r.tono or 0 }}">
+              {%- if r.logo %}<img src="{{ r.logo }}" alt="{{ c.logoAlt }} {{ r.nombre }}" width="116" height="116" loading="lazy" decoding="async">
+              {%- else %}<span aria-hidden="true">{{ r.iniciales }}</span>{% endif -%}
+            </div>
+            <div class="trust-id">
+              <h3 class="trust-name" id="{{ r.id }}-name">{{ r.nombre }}{% if r.draft %} <span class="trust-draft">draft</span>{% endif %}</h3>
+              <p class="trust-role">{{ r.rol[lang] }}</p>
+            </div>
+          </header>
+          <p class="trust-summary">{{ r.resumen[lang] }}</p>
+          <blockquote class="trust-quote">
+            <p class="trust-quote-text">{{ r.resena[lang] }}</p>
+            <button type="button" class="trust-more-text" data-trust-expand aria-expanded="false" data-less="{{ c.readLess }}" hidden>{{ c.readMore }}</button>
+            <footer>— Marvin, <cite>{{ c.quoteBy }}</cite></footer>
+          </blockquote>
+          <ul class="trust-meta">
+            {%- if r.relacion %}<li>{{ icon("users") }}<span>{{ r.relacion[lang] }}</span></li>{% endif %}
+            {%- if r.ubicacion %}<li>{{ icon("pin") }}<span>{{ r.ubicacion }}</span></li>{% endif %}
+            {%- if r.desde %}<li>{{ icon("calendar") }}<span>{{ c.since }} <time datetime="{{ r.desde }}">{{ r.desde }}</time></span></li>{% endif %}
+          </ul>
+          {%- if r.tags[lang].length %}
+          <ul class="tags">{% for tg in r.tags[lang] %}<li class="tag">{{ tg }}</li>{% endfor %}</ul>
+          {%- endif %}
+          <footer class="trust-foot">
+            <ul class="trust-links" aria-label="{{ c.contactLabel }} {{ r.nombre }}">
+              {%- set e = r.enlaces %}
+              {%- if e.web %}<li><a class="trust-link trust-link-main" href="{{ e.web }}" target="_blank" rel="noopener external">{{ icon("web") }}<span>{{ c.visit }}</span></a></li>{% endif %}
+              {%- if e.instagram %}<li><a class="trust-link" href="{{ e.instagram }}" target="_blank" rel="noopener external" aria-label="Instagram — {{ r.nombre }}" title="Instagram">{{ icon("instagram") }}</a></li>{% endif %}
+              {%- if e.linkedin %}<li><a class="trust-link" href="{{ e.linkedin }}" target="_blank" rel="noopener external" aria-label="LinkedIn — {{ r.nombre }}" title="LinkedIn">{{ icon("linkedin") }}</a></li>{% endif %}
+              {%- if e.whatsapp %}<li><a class="trust-link" href="https://wa.me/{{ e.whatsapp }}?text={{ (c.waText + ' ' + r.nombre + '.') | urlencode }}" target="_blank" rel="noopener" aria-label="WhatsApp — {{ r.nombre }}" title="WhatsApp">{{ icon("whatsapp") }}</a></li>{% endif %}
+              {%- if e.email %}<li><a class="trust-link" href="mailto:{{ e.email }}" aria-label="{{ c.emailLabel }} — {{ r.nombre }}" title="{{ c.emailLabel }}">{{ icon("email") }}</a></li>{% endif %}
+            </ul>
+            <button type="button" class="trust-copy" data-trust-copy="{{ r.id }}" data-done="{{ c.copied }}" aria-label="{{ c.copyLabel }}: {{ r.nombre }}" title="{{ c.copyLabel }}" hidden>{{ icon("link") }}</button>
+          </footer>
+        </article>
+      </li>
+      {%- endfor %}
+    </ul>
+    <div class="trust-pager" data-trust-pager hidden><button type="button" class="btn btn-ghost" data-trust-more data-label="{{ c.showMore }}">{{ c.showMore }}</button></div>
+    <p class="trust-empty" data-trust-empty hidden>{{ c.noResults }}</p>
+    {%- else %}
+    <div class="card trust-soon reveal">
+      <span class="icon-chip">{{ icon("heart") }}</span>
+      <h3>{{ c.soonTitle }}</h3>
+      <p>{{ c.soonText }}</p>
+    </div>
+    {%- endif %}
+  </div>
+</section>
+<section class="section section-alt" aria-labelledby="trust-how-title">
+  <div class="container">
+    <div class="section-head"><span class="eyebrow">{{ c.howEyebrow }}</span><h2 id="trust-how-title">{{ c.howTitle }}</h2><p>{{ c.howLead }}</p></div>
+    <ul class="grid-3">
+      {%- for h in c.how %}
+      <li class="card value trust-rule reveal"><span class="icon-chip">{{ icon(h.icon) }}</span><h3>{{ h.title }}</h3><p>{{ h.text }}</p></li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+<section class="section" aria-labelledby="cta-title">
+  <div class="container">
+    <div class="cta reveal">
+      <h2 id="cta-title">{{ c.ctaTitle }}</h2>
+      <p>{{ c.ctaText }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ c.ctaUrl }}">{{ c.ctaBtn }}</a>
+        <a class="btn btn-ghost" href="https://wa.me/{{ site.whatsapp }}" target="_blank" rel="noopener">{{ icon("whatsapp") }} WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
